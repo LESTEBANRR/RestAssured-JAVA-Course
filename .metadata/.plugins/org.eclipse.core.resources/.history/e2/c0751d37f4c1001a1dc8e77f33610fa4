@@ -1,0 +1,27 @@
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.*;
+
+public class basics {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Validate if Add Place API is working as expected
+		
+		//given -all input details
+		//when - Submit the API
+		//then - validate the response
+		
+		RestAssured.baseURI="https://rahulshettyacademy.com";
+		given().queryParam("key", "qaclick123").header("Content-Type","application/json")
+		.body("{\r\n"+
+		"\"location\":{\r\n"+
+		"	\"lat\": -38.383494,\r\n"+
+		" 	\"lng\": 33.427362, \r\n"+
+		" }, \r\n"+
+		""
+				);
+		
+	}
+
+}

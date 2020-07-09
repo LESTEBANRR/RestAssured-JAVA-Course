@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\Azul\Documents\L_E\RestAssuredCourse\.metadata\.plugins\org.eclipse.jdt.core
+3397293651.index
+2872044937.index
