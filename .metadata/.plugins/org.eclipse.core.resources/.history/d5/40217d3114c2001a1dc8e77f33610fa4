@@ -15,13 +15,6 @@ public class ComplexJsonPath {
 		//Print Title of the first course
 		String firstTitle= js.getString("courses[0].title");
 		System.out.println(firstTitle);
-		//Print all courses titles and their respective prices
-		System.out.println("Titles and Prices");
-		for (int i = 0; i < count; i++) {
-			String title=js.getString("courses["+i+"].title");
-			String price=js.getString("courses["+i+"].price");
-			System.out.println("title: "+title+" , price : "+price);
-		}
 	}
 
 }
