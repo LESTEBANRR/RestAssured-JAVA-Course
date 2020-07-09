@@ -50,7 +50,7 @@ public class basics {
 		JsonPath js1=new JsonPath(getPlaceResponse);
 		String actualAddress=js1.getString("address");
 		
-		System.out.println(actualAddress);
+		
 		
 	}
 

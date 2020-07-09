@@ -42,15 +42,9 @@ public class basics {
 		.then().assertThat().log().all().statusCode(200).body("msg", equalTo("Address successfully updated"));
 		
 		// Get Place
-		String getPlaceResponse= 
-		 given().log().all().queryParam("key", "qaclick123").header("Content-Type","application/json")
+		given().log().all().queryParam("key", "qaclick123").header("Content-Type","application/json")
 		.queryParam("place_id", placeId).when().get("maps/api/place/get/json")
-		.then().assertThat().statusCode(200).extract().response().asString();
-		
-		JsonPath js1=new JsonPath(getPlaceResponse);
-		String actualAddress=js1.getString("address");
-		
-		System.out.println(actualAddress);
+		.then().assertThat().statusCode(200)
 		
 	}
 

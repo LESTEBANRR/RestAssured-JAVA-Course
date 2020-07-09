@@ -48,9 +48,7 @@ public class basics {
 		.then().assertThat().statusCode(200).extract().response().asString();
 		
 		JsonPath js1=new JsonPath(getPlaceResponse);
-		String actualAddress=js1.getString("address");
-		
-		System.out.println(actualAddress);
+		js1.getString("address");
 		
 	}
 
