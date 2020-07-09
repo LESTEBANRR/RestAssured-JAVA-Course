@@ -30,7 +30,8 @@ public class basics {
 		JsonPath js= new JsonPath(response);
 		String placeId= js.getString("place_id");
 		
-		System.out.println("placeId:"+placeId);		
+		System.out.println("placeId:"+placeId);
+		
 		
 		// Add place -> update Place with New Address -> Get place to validate if new address is prsent in response
 		
