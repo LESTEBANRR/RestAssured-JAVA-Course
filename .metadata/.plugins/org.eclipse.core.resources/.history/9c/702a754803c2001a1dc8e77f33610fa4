@@ -22,9 +22,7 @@ public class payload {
 	}
 	public static String UpdateAddess(String place_id) {
 		return "{\r\n"
-			 + "	\"place_id\":\""+place_id+"\",\r\n"
-			 + "	\"address\":\"70 Summer walk, USA\",\r\n"
-			 + "	\"key\":\"qaclick123\"\r\n "
-			 + "}";
+			 + "	\"place_id\":\"49d9804508ac68924f5d2416be0ddd31\",\r\n"
+			 + "	\"address\":";
 	}
 }

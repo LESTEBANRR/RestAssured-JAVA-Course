@@ -19,7 +19,6 @@ public class basics {
 		
 		RestAssured.baseURI="https://rahulshettyacademy.com";
 		String resource="maps/api/place/add/json";
-		String resource2="maps/api/place/update/json";
 		
 		String response=
 		given().log().all().queryParam("key", "qaclick123").header("Content-Type","application/json")
@@ -35,8 +34,8 @@ public class basics {
 		
 		// Update Place
 		given().log().all().queryParam("key", "qaclick123").header("Content-Type","application/json")
-		.body(payload.UpdateAddess(placeId)).when().put(resource2) 
-		.then().assertThat().log().all().statusCode(200).body("msg", equalTo("Address successfully updated"));
+		.body(payload.UpdateAddess(placeId))
+		
 		
 		
 		

@@ -36,7 +36,7 @@ public class basics {
 		// Update Place
 		given().log().all().queryParam("key", "qaclick123").header("Content-Type","application/json")
 		.body(payload.UpdateAddess(placeId)).when().put(resource2) 
-		.then().assertThat().log().all().statusCode(200).body("msg", equalTo("Address successfully updated"));
+		.then().assertThat().statusCode(200).body("msg", equalTo("Address successfully updated"));
 		
 		
 		

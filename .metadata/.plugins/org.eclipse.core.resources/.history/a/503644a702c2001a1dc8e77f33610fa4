@@ -20,11 +20,4 @@ public class payload {
 			      "  \"language\": \"French-IN\"\r\n"+
 			      "}\r\n";
 	}
-	public static String UpdateAddess(String place_id) {
-		return "{\r\n"
-			 + "	\"place_id\":\""+place_id+"\",\r\n"
-			 + "	\"address\":\"70 Summer walk, USA\",\r\n"
-			 + "	\"key\":\"qaclick123\"\r\n "
-			 + "}";
-	}
 }
