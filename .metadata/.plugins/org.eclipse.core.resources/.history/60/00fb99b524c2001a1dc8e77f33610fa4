@@ -44,11 +44,7 @@ public class ComplexJsonPath {
 			priceAmount+= price*copiesC;
 		}
 		System.out.println("Purchase Amount : "+priceAmount);
-		if (priceAmount==purchase_price) {
-			System.out.println("The Purchase Amount is Correct");
-		}else {
-			System.out.println("The Purchase Amount is Incorrect");
-		}
+		
 	}
 	
 	
