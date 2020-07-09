@@ -2,17 +2,17 @@ package files;
 
 public class payload {
 
-	public static String Addbook(String aisle,String isbn) {
+	public static String Addbook() {
 		return
 				"{\r\n"
 			  + "  \"name\": \"Lear Appium\",\r\n"
-			  + "  \"isbn\": \""+isbn+"\",\r\n"
-			  + "  \"aisle\": \""+aisle+"\",\r\n"
+			  + "  \"isbn\": \"bczd\",\r\n"
+			  + "  \"aisle\": \"22acccmm70\",\r\n"
 			  + "  \"author\": \"JOhn Foe\"\r\n"
 			  + "}\r\n";
 	}
 	
-	public static String AddPLaceJson() {
+	public static String AddPLaceJson(String aisle,String isbn) {
 		return "{\r\n"+
 				  "  \"location\": {\r\n"+
 				  "  	\"lat\": -38.383494,\r\n"+
