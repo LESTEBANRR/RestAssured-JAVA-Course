@@ -58,5 +58,6 @@
 	<classpathentry kind="lib" path="C:/Users/Azul/Documents/L_E/Rest Assured Jars/json-schema-validator-4.3.1-dist/json-schema-validator-4.3.1-deps/uri-template-0.9.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Azul/Documents/L_E/Rest Assured Jars/json-schema-validator-4.3.1-dist/docs/json-schema-validator-4.3.1-javadoc.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Azul/Documents/L_E/Rest Assured Jars/json-schema-validator-4.3.1-dist/docs/json-schema-validator-4.3.1-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Azul/Documents/L_E/Rest Assured Jars/testng-7.1.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
