@@ -19,7 +19,7 @@ public class JiraTest {
 		String issueId="10101";
 		//Authorization
 		String response=
-				given().relaxedHTTPSValidation().header("Content-Type","application/json").body(
+				given().header("Content-Type","application/json").body(
 						"{\r\n \"username\":\"l_esteban_rr\",\r\n \"password\":\"1174163RRLE\"\r\n }\r\n").log().all()
 				.filter(session)
 				.when().post("/rest/auth/1/session").then().log().all()

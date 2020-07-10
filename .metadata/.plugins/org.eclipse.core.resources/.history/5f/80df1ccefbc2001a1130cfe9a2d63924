@@ -3,8 +3,6 @@ import static io.restassured.RestAssured.*;
 
 import java.io.File;
 
-import org.testng.Assert;
-
 import io.restassured.RestAssured;
 import io.restassured.filter.session.SessionFilter;
 import io.restassured.path.json.JsonPath;
@@ -19,7 +17,7 @@ public class JiraTest {
 		String issueId="10101";
 		//Authorization
 		String response=
-				given().relaxedHTTPSValidation().header("Content-Type","application/json").body(
+				given().header("Content-Type","application/json").body(
 						"{\r\n \"username\":\"l_esteban_rr\",\r\n \"password\":\"1174163RRLE\"\r\n }\r\n").log().all()
 				.filter(session)
 				.when().post("/rest/auth/1/session").then().log().all()
@@ -64,7 +62,6 @@ public class JiraTest {
 			String comId=js.get("fields.comment.comments["+i+"].id").toString();
 			if(comId.equalsIgnoreCase(commentId)) {
 				String message =js.get("fields.comment.comments["+i+"].body");
-				Assert.assertEquals(message, expectedMessage);
 				break;
 			}			
 		}
