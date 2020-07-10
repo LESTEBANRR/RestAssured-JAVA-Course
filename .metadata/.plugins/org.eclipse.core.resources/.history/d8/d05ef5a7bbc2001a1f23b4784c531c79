@@ -1,8 +1,7 @@
 package files;
 
-
+import org.junit.jupiter.api.Test;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
@@ -10,7 +9,7 @@ import io.restassured.path.json.JsonPath;
 import static io.restassured.RestAssured.*;
 
 public class DynamicJson {
-	@Test(dataProvider="BooksData")
+	@Test
 	public void addBook() {
 		RestAssured.baseURI="http://216.10.245.166";
 		String response= given().header("Content-Type","application/json").
@@ -21,7 +20,7 @@ public class DynamicJson {
 		String id=js.getString("ID");
 		System.out.println("ID: "+id);
 	}
-	@DataProvider(name="BooksData")
+	@DataProvider
 	public Object[][] getData() {
 		return new Object[][] {{"ojjdie","21o0"},{"sdeoef","2788"},{"oepqws","0901"}};
 	}

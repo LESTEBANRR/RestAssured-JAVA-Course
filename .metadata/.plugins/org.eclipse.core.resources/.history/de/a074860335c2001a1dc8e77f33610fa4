@@ -18,7 +18,7 @@ public class SumValidation {
 				int purchase_price= js.getInt("dashboard.purchaseAmount");
 				System.out.println(purchase_price);
 		
-		//Verify if the PriceMAount is correct
+		//Veify if the PriceMAount is correct
 		int priceAmount=0;
 		for (int i = 0; i < count; i++) {
 			int price=js.getInt("courses["+i+"].price");
