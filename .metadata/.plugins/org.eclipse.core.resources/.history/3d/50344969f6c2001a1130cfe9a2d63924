@@ -44,7 +44,7 @@ public class JiraTest {
 		//Get Issue
 		String issueDetails=
 		 given().filter(session).pathParam("key", issueId)
-		 .queryParam("fields", "comment")
+		 .queryParam("fields", arg1)
 		.when().get("/rest/api/2/issue/{key}")
 		.then().log().all().assertThat().statusCode(200).extract().response().asString();
 		

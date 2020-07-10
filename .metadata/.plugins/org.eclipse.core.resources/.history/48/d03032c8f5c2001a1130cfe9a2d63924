@@ -42,9 +42,7 @@ public class JiraTest {
 		.then().log().all()	.assertThat().statusCode(200);
 		
 		//Get Issue
-		String issueDetails=
-		 given().filter(session).pathParam("key", issueId)
-		 .queryParam("fields", "comment")
+		given().filter(session).pathParam("key", issueId)
 		.when().get("/rest/api/2/issue/{key}")
 		.then().log().all().assertThat().statusCode(200).extract().response().asString();
 		

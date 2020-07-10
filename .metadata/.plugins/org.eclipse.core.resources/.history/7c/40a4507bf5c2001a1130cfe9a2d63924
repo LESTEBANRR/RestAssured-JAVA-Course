@@ -13,8 +13,8 @@ public class JiraTest {
 		
 		SessionFilter session=new SessionFilter();
 		
-		String issueId="10101";
-		//Authorization
+		
+		
 		String response=
 				given().header("Content-Type","application/json").body(
 						"{\r\n \"username\":\"l_esteban_rr\",\r\n \"password\":\"1174163RRLE\"\r\n }\r\n").log().all()
@@ -23,7 +23,7 @@ public class JiraTest {
 				.extract().response().asString();
 		
 		//ADD Comment to an Issue
-		given().log().all().pathParam("key", issueId).header("Content-Type","application/json").body("{\r\n"
+		given().log().all().pathParam("key", "10101").header("Content-Type","application/json").body("{\r\n"
 											+  "  \"body\": \"This is my first comment\",\r\n"
 											+  "  \"visibility\":{\r\n"
 											+  "	\"type\": \"role\",\r\n"
@@ -35,18 +35,13 @@ public class JiraTest {
 		.then().log().all().assertThat().statusCode(201);
 		
 		//Add Attachment to Issue
-		given().header("X-Atlassian-Token","no-check").filter(session).pathParam("key", issueId)
+		given().header("X-Atlassian-Token","no-check").filter(session).pathParam("key", "10101")
 		.header("Content-Type","multipart/fomr-dat")
 		.multiPart("file", new File("C:\\Users\\Azul\\Documents\\L_E\\RestAssuredCourse\\DemoProject\\src\\files\\JiraTextAttach"))
 		.when().post("rest/api/2/issue/{key}/attachments")
 		.then().log().all()	.assertThat().statusCode(200);
-		
 		//Get Issue
-		String issueDetails=
-		 given().filter(session).pathParam("key", issueId)
-		 .queryParam("fields", "comment")
-		.when().get("/rest/api/2/issue/{key}")
-		.then().log().all().assertThat().statusCode(200).extract().response().asString();
+		
 		
 	}
 	
