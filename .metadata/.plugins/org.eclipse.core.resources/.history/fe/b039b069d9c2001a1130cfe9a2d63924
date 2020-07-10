@@ -1,0 +1,16 @@
+package files;
+import static io.restassured.RestAssured.*;
+
+import io.restassured.RestAssured;
+
+public class JiraTest {
+
+	public static void main (String[] args) {
+		RestAssured.baseURI="http://localhost:8080/";
+		
+		given().pathParam("key", "10101").body("{\r\n"
+				+ "");
+		
+	}
+	
+}
