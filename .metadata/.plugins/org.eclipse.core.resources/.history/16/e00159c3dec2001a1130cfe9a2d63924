@@ -20,7 +20,7 @@ public class JiraTest {
 				.when().post("/rest/auth/1/session").then().log().all()
 				.extract().response().asString();
 		
-		//ADD Comment
+		
 		given().log().all().pathParam("key", "10101").header("Content-Type","application/json").body("{\r\n"
 											+  "  \"body\": \"This is my first comment\",\r\n"
 											+  "  \"visibility\":{\r\n"
