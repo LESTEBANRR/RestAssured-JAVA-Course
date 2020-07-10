@@ -61,5 +61,6 @@
 	<classpathentry kind="lib" path="C:/Users/Azul/Documents/L_E/Rest Assured Jars/testng-7.1.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Azul/Documents/L_E/Rest Assured Jars/jcommander-1.78.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="C:/Users/Azul/Documents/L_E/Rest Assured Jars/guice-4.2.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -10,17 +10,21 @@ import io.restassured.path.json.JsonPath;
 import static io.restassured.RestAssured.*;
 
 public class DynamicJson {
+	
 	@Test(dataProvider="BooksData")
-	public void addBook() {
+	public void addBook(String isbn,String aisle) {
 		RestAssured.baseURI="http://216.10.245.166";
+		
 		String response= given().header("Content-Type","application/json").
-		body(payload.Addbook("abcds","sd32ed")).
+		body(payload.Addbook(isbn , aisle)).
 		when().post("/Library/Addbook.php")
 		.then().assertThat().statusCode(200).extract().response().asString();
 		JsonPath js=ReUsableMethods.rawToJson(response);
+		
 		String id=js.getString("ID");
 		System.out.println("ID: "+id);
 	}
+	
 	@DataProvider(name="BooksData")
 	public Object[][] getData() {
 		return new Object[][] {{"ojjdie","21o0"},{"sdeoef","2788"},{"oepqws","0901"}};
