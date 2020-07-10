@@ -9,10 +9,6 @@ import io.restassured.path.json.JsonPath;
 
 import static io.restassured.RestAssured.*;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-
 public class DynamicJson {
 	
 	@Test(dataProvider="BooksData")
@@ -33,7 +29,4 @@ public class DynamicJson {
 	public Object[][] getData() {
 		return new Object[][] {{"ojjdie","21o0"},{"sdeoef","2788"},{"oepqws","0901"}};
 	}
-	
-	
 }
-
