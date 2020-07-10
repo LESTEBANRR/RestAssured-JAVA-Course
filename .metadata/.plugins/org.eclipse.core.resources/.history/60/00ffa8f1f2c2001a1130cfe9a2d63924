@@ -36,7 +36,7 @@ public class JiraTest {
 		
 		//Add Attachment
 		given().header("X-Atlassian-Token","no-check").filter(session).pathParam("key", "10101")
-		.header("Content-Type","multipart/fomr-dat")
+		.header("Content-Type","application/json")
 		.multiPart("file", new File("C:\\Users\\Azul\\Documents\\L_E\\RestAssuredCourse\\DemoProject\\src\\files\\JiraTextAttach"))
 		.when().post("rest/api/2/issue/{key}/attachments")
 		.then().log().all()	.assertThat().statusCode(200);
