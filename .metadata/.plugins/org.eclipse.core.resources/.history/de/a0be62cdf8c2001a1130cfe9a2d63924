@@ -24,10 +24,9 @@ public class JiraTest {
 				.extract().response().asString();
 		
 		//ADD Comment to an Issue
-		String expectedMessage="This is my first comment";
-		String addCommentResponse=
+		String d=
 		given().log().all().pathParam("key", issueId).header("Content-Type","application/json").body("{\r\n"
-											+  "  \"body\": \""+expectedMessage+"\",\r\n"
+											+  "  \"body\": \"This is my first comment\",\r\n"
 											+  "  \"visibility\":{\r\n"
 											+  "	\"type\": \"role\",\r\n"
 											+  "	\"value\": \"Administrators\"\r\n"
@@ -37,9 +36,6 @@ public class JiraTest {
 		.when().post("/rest/api/2/issue/{key}/comment")
 		.then().log().all().assertThat().statusCode(201)
 		.extract().response().asString();
-		
-		JsonPath js1=new JsonPath(addCommentResponse);
-		String commentId=js1.get("id").toString();
 		
 		//Add Attachment to Issue
 		given().header("X-Atlassian-Token","no-check").filter(session).pathParam("key", issueId)
@@ -55,16 +51,8 @@ public class JiraTest {
 		.when().get("/rest/api/2/issue/{key}")
 		.then().log().all().assertThat().statusCode(200).extract().response().asString();
 		
-				
 		JsonPath js =new JsonPath(issueDetails);
-		int commentsCount=js.getInt("fields.comment.comments.size()");
-		for (int i = 0; i < commentsCount; i++) {
-			String comId=js.get("fields.comment.comments["+i+"].id").toString();
-			if(comId.equalsIgnoreCase(commentId)) {
-				String message =js.get("fields.comment.comments["+i+"].body");
-				break;
-			}			
-		}
+		//js.getInt("fields.comment.comments.size()");
 		
 		
 	}

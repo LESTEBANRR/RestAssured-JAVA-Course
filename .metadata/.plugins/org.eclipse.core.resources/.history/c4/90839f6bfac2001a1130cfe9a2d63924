@@ -63,9 +63,9 @@ public class JiraTest {
 			if(comId.equalsIgnoreCase(commentId)) {
 				String message =js.get("fields.comment.comments["+i+"].body");
 				break;
-			}			
+			}
+			
 		}
-		
 		
 	}
 	
