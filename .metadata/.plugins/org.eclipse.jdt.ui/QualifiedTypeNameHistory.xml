@@ -2,11 +2,16 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="org.hamcrest.Matchers"/>
     <fullyQualifiedTypeName name="files.payload"/>
-    <fullyQualifiedTypeName name="org.testng.Assert"/>
-    <fullyQualifiedTypeName name="io.restassured.RestAssured"/>
     <fullyQualifiedTypeName name="files.ReUsableMethods"/>
-    <fullyQualifiedTypeName name="io.restassured.path.json.JsonPath"/>
     <fullyQualifiedTypeName name="org.testng.annotations.DataProvider"/>
     <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
     <fullyQualifiedTypeName name="org.junit.Test"/>
+    <fullyQualifiedTypeName name="java.nio.file.Files"/>
+    <fullyQualifiedTypeName name="java.nio.file.Paths"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="io.restassured.RestAssured"/>
+    <fullyQualifiedTypeName name="io.restassured.filter.session.SessionFilter"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="io.restassured.path.json.JsonPath"/>
+    <fullyQualifiedTypeName name="org.testng.Assert"/>
 </qualifiedTypeNameHistroy>
