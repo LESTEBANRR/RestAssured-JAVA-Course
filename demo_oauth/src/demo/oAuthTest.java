@@ -1,13 +1,27 @@
 package demo;
 import static io.restassured.RestAssured.*;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 import io.restassured.path.json.JsonPath;
 
 public class oAuthTest {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub		
-		
+		System.setProperty("webdriver.chrome.driver", "C://chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("");
+		driver.findElement(By.cssSelector("input[type='email']")).sendKeys("srinath19830");
+		driver.findElement(By.cssSelector("input[type='email']")).sendKeys(Keys.ENTER);
+		Thread.sleep(2000);
+		driver.findElement(By.cssSelector("input[type='password']")).sendKeys("password");
+		driver.findElement(By.cssSelector("input[type='password']")).sendKeys(Keys.ENTER);
+		Thread.sleep(3000);
+		String url=driver.getCurrentUrl();
 		
 		String accessTokenResponse=
 		given()
