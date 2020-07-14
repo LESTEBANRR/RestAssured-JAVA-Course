@@ -6,16 +6,18 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
-
+import pojo.GetCourse;
 public class oAuthTest {
-
+	
 	public static void main(String[] args) throws InterruptedException {
 		/*
 		//Selenium Automation, Google don't want automation login.		
 		System.setProperty("webdriver.chrome.driver", "C://chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
-		driver.get("");
+		driver.get("http://www.google.com");
+		
 		driver.findElement(By.cssSelector("input[type='email']")).sendKeys("srinath19830");
 		driver.findElement(By.cssSelector("input[type='email']")).sendKeys(Keys.ENTER);
 		Thread.sleep(2000);
@@ -31,6 +33,7 @@ public class oAuthTest {
 		
 		String partialCode= url.split("code=")[1];
 		String code=partialCode.split("&scope")[0];
+		
 		// Get the Access Token
 		String accessTokenResponse=
 		given().urlEncodingEnabled(false)
@@ -46,15 +49,19 @@ public class oAuthTest {
 		JsonPath js=new JsonPath(accessTokenResponse);
 		String accessToken=js.getString("access_token");
 		// Login in the page
-		String response=
+		GetCourse gc=
 		given()
-		.queryParam("access_token", accessToken)
-		.when().log().all()
+		.queryParam("access_token", accessToken).expect().defaultParser(Parser.JSON)
+		.when()
 		.get("http://rahulshettyacademy.com/getCourse.php")
-		.asString()
+		
+		.as(GetCourse.class)
 		;
+		
+		System.out.println(gc.getLinkedIn());
+		System.out.println(gc.getInstructor());
 
-		System.out.println(response);		
+		//System.out.println(response);		
 		
 	}
 
