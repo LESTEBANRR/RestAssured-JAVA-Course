@@ -1,20 +1,27 @@
 package demo;
 import static io.restassured.RestAssured.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+
+import com.sun.tools.javac.code.Attribute.Array;
 
 import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
 import pojo.GetCourse;
+import pojo.WebAutomation;
 import pojo.API;
 public class oAuthTest {
 	
 	public static void main(String[] args) throws InterruptedException {
+		String[] courseTitle= {"Selenium WebDriver Java","Cypress","Protactor"};
 		/*
 		//Selenium Automation, Google don't want automation login.		
 		System.setProperty("webdriver.chrome.driver", "C://chromedriver.exe");
@@ -71,8 +78,15 @@ public class oAuthTest {
 				System.out.println(api.getPrice());
 			}
 		}
-		//System.out.println(response);		
+		// Get the course name of Web Automation
+		ArrayList<String> a=new ArrayList<String>();
+		List<WebAutomation> wa=gc.getCourses().getWebAutomation();
+		for (WebAutomation webAutomation : wa) {
+			a.add(webAutomation.getCourseTitle());
+		}
+		List<String> expectedList=Arrays.asList(courseTitle);
 		
+		Assert.assertTrue(a.equals(expectedList));
 	}
 
 }
