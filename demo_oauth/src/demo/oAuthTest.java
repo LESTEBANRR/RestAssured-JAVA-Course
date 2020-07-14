@@ -1,6 +1,8 @@
 package demo;
 import static io.restassured.RestAssured.*;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
 import pojo.GetCourse;
+import pojo.API;
 public class oAuthTest {
 	
 	public static void main(String[] args) throws InterruptedException {
@@ -60,7 +63,14 @@ public class oAuthTest {
 		
 		System.out.println(gc.getLinkedIn());
 		System.out.println(gc.getInstructor());
-
+		System.out.println(gc.getCourses().getApi().get(1).getCourseTitle());
+		
+		List<API> apiCourses=gc.getCourses().getApi();
+		for (API api : apiCourses) {			
+			if(api.getCourseTitle().equalsIgnoreCase("SoapUI Web Services testing")) {
+				System.out.println(api.getPrice());
+			}
+		}
 		//System.out.println(response);		
 		
 	}

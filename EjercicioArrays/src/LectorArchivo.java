@@ -16,8 +16,8 @@ public class LectorArchivo {
 	}
 	
 	public static void DisplayList(List<String> fileArray) {
-		for(int i=0;i<fileArray.size();i++) {
-			System.out.println(fileArray.get(i));
+		for (String string : fileArray) {
+			System.out.println(string);
 		}
 	}
 	
