@@ -63,8 +63,7 @@ public class LectorArchivo {
 			int length=linea.length();			
 			for (int i = 0; i < length; i++) {
 				
-				char ch=linea.charAt(i);
-				
+				char ch=linea.charAt(i);				
 				if(ch==',' || ch == ' ') {
 					if(cadena.length()>0) {
 						fileArray.add(cadena);

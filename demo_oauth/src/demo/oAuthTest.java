@@ -11,8 +11,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
-import com.sun.tools.javac.code.Attribute.Array;
-
 import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
 import pojo.GetCourse;
