@@ -23,17 +23,16 @@
 <dependency>
     <groupId>info.cukes</groupId>
     <artifactId>cucumber-junit</artifactId>
-    <version>1.2.6</version>
+    <version>1.2.5</version>
     <type>pom</type>
     <scope>test</scope>
 </dependency>
-  
-  <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
+ 
+<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
 <dependency>
     <groupId>info.cukes</groupId>
     <artifactId>cucumber-java</artifactId>
-    <version>1.2.6</version>
-    <type>pom</type>
+    <version>1.2.5</version>
 </dependency>
   
     <dependency>
