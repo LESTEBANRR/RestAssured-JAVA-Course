@@ -1,0 +1,5 @@
+To Create a Maven project Use
+mvn archetype:generate -DgroupId=Qaclickacademy -DartifactId=MavenJava -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+To import Maven project to eclipse
+mvn eclipse:eclipse
