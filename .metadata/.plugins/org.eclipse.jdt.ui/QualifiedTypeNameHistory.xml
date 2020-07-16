@@ -46,4 +46,12 @@
     <fullyQualifiedTypeName name="io.restassured.builder.ResponseSpecBuilder"/>
     <fullyQualifiedTypeName name="io.restassured.http.ContentType"/>
     <fullyQualifiedTypeName name="io.restassured.specification.ResponseSpecification"/>
+    <fullyQualifiedTypeName name="cucumber.api.java.en.Given"/>
+    <fullyQualifiedTypeName name="cucumber.api.java.en.When"/>
+    <fullyQualifiedTypeName name="cucumber.api.java.en.Then"/>
+    <fullyQualifiedTypeName name="cucumber.api.java.en.And"/>
+    <fullyQualifiedTypeName name="cucumber.api.junit.Cucumber"/>
+    <fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
+    <fullyQualifiedTypeName name="cucumber.api.CucumberOptions"/>
+    <fullyQualifiedTypeName name="cucumber.api.PendingException"/>
 </qualifiedTypeNameHistroy>
