@@ -7,14 +7,14 @@ import pojo.Location;
 
 public class TestDataBuild {
 
-	public AddPlace addPlacePayload() {
+	public AddPlace addPlacePayload(String name, String language, String address) {
 		AddPlace place = new AddPlace();
 		place.setAccuracy(50);
-		place.setAddress("Addresss 1234");
-		place.setLanguage("French");
+		place.setAddress(address);
+		place.setLanguage(language);
 		place.setPhone_number("4491234567");
 		place.setWebsite("http://rahulshettyacademy.com");
-		place.setName("FrontLine");
+		place.setName(name);
 		List<String> types = new ArrayList<String>();
 		types.add("shoe park");
 		types.add("shop");

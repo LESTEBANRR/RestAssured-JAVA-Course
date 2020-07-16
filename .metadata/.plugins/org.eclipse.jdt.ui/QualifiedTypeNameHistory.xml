@@ -1,18 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.hamcrest.Matchers"/>
-    <fullyQualifiedTypeName name="files.payload"/>
-    <fullyQualifiedTypeName name="files.ReUsableMethods"/>
-    <fullyQualifiedTypeName name="org.testng.annotations.DataProvider"/>
-    <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
-    <fullyQualifiedTypeName name="org.junit.Test"/>
-    <fullyQualifiedTypeName name="java.nio.file.Files"/>
-    <fullyQualifiedTypeName name="java.nio.file.Paths"/>
-    <fullyQualifiedTypeName name="java.io.IOException"/>
-    <fullyQualifiedTypeName name="io.restassured.filter.session.SessionFilter"/>
-    <fullyQualifiedTypeName name="io.restassured.path.json.JsonPath"/>
-    <fullyQualifiedTypeName name="java.io.File"/>
-    <fullyQualifiedTypeName name="java.io.FileReader"/>
     <fullyQualifiedTypeName name="java.io.BufferedReader"/>
     <fullyQualifiedTypeName name="com.sun.tools.javac.util.List"/>
     <fullyQualifiedTypeName name="java.awt.List"/>
@@ -32,12 +19,10 @@
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="org.testng.Assert"/>
     <fullyQualifiedTypeName name="io.restassured.RestAssured"/>
-    <fullyQualifiedTypeName name="pojo.AddPlace"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="pojo.Location"/>
     <fullyQualifiedTypeName name="io.restassured.builder.RequestSpecBuilder"/>
-    <fullyQualifiedTypeName name="io.restassured.specification.RequestSpecification"/>
     <fullyQualifiedTypeName name="io.restassured.internal.RequestSpecificationImpl"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.remote.Response"/>
     <fullyQualifiedTypeName name="okhttp3.Response"/>
@@ -51,7 +36,28 @@
     <fullyQualifiedTypeName name="cucumber.api.java.en.Then"/>
     <fullyQualifiedTypeName name="cucumber.api.java.en.And"/>
     <fullyQualifiedTypeName name="cucumber.api.junit.Cucumber"/>
-    <fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
     <fullyQualifiedTypeName name="cucumber.api.CucumberOptions"/>
     <fullyQualifiedTypeName name="cucumber.api.PendingException"/>
+    <fullyQualifiedTypeName name="io.cucumber.junit.CucumberOptions"/>
+    <fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
+    <fullyQualifiedTypeName name="io.cucumber.junit.Cucumber"/>
+    <fullyQualifiedTypeName name="io.cucumber.java.en.Given"/>
+    <fullyQualifiedTypeName name="io.cucumber.java.PendingException"/>
+    <fullyQualifiedTypeName name="io.cucumber.java.en.When"/>
+    <fullyQualifiedTypeName name="io.cucumber.java.en.Then"/>
+    <fullyQualifiedTypeName name="io.cucumber.java.en.And"/>
+    <fullyQualifiedTypeName name="org.junit.Assert"/>
+    <fullyQualifiedTypeName name="io.restassured.path.json.JsonPath"/>
+    <fullyQualifiedTypeName name="pojo.AddPlace"/>
+    <fullyQualifiedTypeName name="resources.Utils"/>
+    <fullyQualifiedTypeName name="io.restassured.specification.RequestSpecification"/>
+    <fullyQualifiedTypeName name="resources.TestDataBuild"/>
+    <fullyQualifiedTypeName name="io.restassured.filter.log.RequestLoggingFilter"/>
+    <fullyQualifiedTypeName name="java.io.PrintStream"/>
+    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+    <fullyQualifiedTypeName name="io.restassured.filter.log.ResponseLoggingFilter"/>
+    <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.util.Properties"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
 </qualifiedTypeNameHistroy>

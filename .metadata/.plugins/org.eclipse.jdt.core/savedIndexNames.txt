@@ -5,8 +5,8 @@ INDEX VERSION 1.131+C:\Users\Azul\Documents\L_E\RestAssuredCourse\.metadata\.plu
 3765260414.index
 833534202.index
 3470898474.index
-3949728930.index
 1803988699.index
+3949728930.index
 2283780000.index
 671202312.index
 877597370.index
@@ -19,8 +19,8 @@ INDEX VERSION 1.131+C:\Users\Azul\Documents\L_E\RestAssuredCourse\.metadata\.plu
 90068321.index
 1882934370.index
 2576217346.index
-235055408.index
 2948011356.index
+235055408.index
 1844510239.index
 2401064745.index
 1173860204.index
@@ -49,15 +49,15 @@ INDEX VERSION 1.131+C:\Users\Azul\Documents\L_E\RestAssuredCourse\.metadata\.plu
 694374706.index
 956162179.index
 2648300905.index
-2350022725.index
 3739951731.index
+2350022725.index
 4234009407.index
 4186898144.index
 569995364.index
 157232472.index
 1293826669.index
-3816611855.index
 2395073982.index
+3816611855.index
 342283435.index
 3056187580.index
 1414343125.index
@@ -97,8 +97,8 @@ INDEX VERSION 1.131+C:\Users\Azul\Documents\L_E\RestAssuredCourse\.metadata\.plu
 2789946894.index
 436480192.index
 644439269.index
-2520539326.index
 2159263267.index
+2520539326.index
 3196986699.index
 3799097024.index
 4119798418.index
