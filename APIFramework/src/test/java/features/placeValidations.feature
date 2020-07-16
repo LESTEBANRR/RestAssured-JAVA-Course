@@ -8,5 +8,6 @@ Feature: Validating Place API's
     And "scope" in response body is "APP"
 
     Examples: 
-      | name   | language | address |
-      | AAHome | English  | World01 |
+      | name    | language | address  |
+      | AAHome  | English  | World01  |
+      | BBHouse | Spanish  | Sea cost |
