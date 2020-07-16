@@ -5261,3 +5261,71 @@ java.lang.RuntimeException
 	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
 	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1769)
 	at java.base/java.lang.Thread.run(Thread.java:832)
+
+!ENTRY de.jcup.asciidoctoreditor 4 0 2020-07-16 11:50:46.506
+!MESSAGE Was not able to launch asp server
+!STACK 0
+de.jcup.asp.core.LaunchException: Server did not return secret!
+	at de.jcup.asp.server.asciidoctorj.launcher.ExternalProcessAsciidoctorJServerLauncher.waitForSecretKey(ExternalProcessAsciidoctorJServerLauncher.java:111)
+	at de.jcup.asp.server.asciidoctorj.launcher.ExternalProcessAsciidoctorJServerLauncher.launch(ExternalProcessAsciidoctorJServerLauncher.java:85)
+	at de.jcup.asciidoctoreditor.asciidoc.ASPServerAdapter.startServer(ASPServerAdapter.java:138)
+	at de.jcup.asciidoctoreditor.ASPSupport.internalUpdateASPServerStart(ASPSupport.java:150)
+	at de.jcup.asciidoctoreditor.ASPSupport.lambda$0(ASPSupport.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+!ENTRY de.jcup.asciidoctoreditor 4 0 2020-07-16 11:51:16.877
+!MESSAGE Was not able to launch asp server
+!STACK 0
+de.jcup.asp.core.LaunchException: Timed out after 30 seconds
+	at de.jcup.asp.server.asciidoctorj.launcher.ExternalProcessAsciidoctorJServerLauncher.waitForSecretKey(ExternalProcessAsciidoctorJServerLauncher.java:103)
+	at de.jcup.asp.server.asciidoctorj.launcher.ExternalProcessAsciidoctorJServerLauncher.launch(ExternalProcessAsciidoctorJServerLauncher.java:85)
+	at de.jcup.asciidoctoreditor.asciidoc.ASPServerAdapter.startServer(ASPServerAdapter.java:138)
+	at de.jcup.asciidoctoreditor.ASPSupport$FallbackRestartHandler.handleNotAvailable(ASPSupport.java:49)
+	at de.jcup.asciidoctoreditor.ASPSupport.waitForServerAvailable(ASPSupport.java:76)
+	at de.jcup.asciidoctoreditor.ASPSupport.getAspClient(ASPSupport.java:34)
+	at de.jcup.asciidoctoreditor.asciidoc.AspAsciidoctorAdapter.resolveClient(AspAsciidoctorAdapter.java:68)
+	at de.jcup.asciidoctoreditor.asciidoc.AspAsciidoctorAdapter.convertFile(AspAsciidoctorAdapter.java:50)
+	at de.jcup.asciidoctoreditor.asciidoc.AsciiDoctorWrapper.convert(AsciiDoctorWrapper.java:77)
+	at de.jcup.asciidoctoreditor.preview.AsciiDoctorEditorBuildSupport.fullBuildTemporaryHTMLFilesAndShowAfter(AsciiDoctorEditorBuildSupport.java:220)
+	at de.jcup.asciidoctoreditor.preview.AsciiDoctorEditorBuildSupport.access$1(AsciiDoctorEditorBuildSupport.java:175)
+	at de.jcup.asciidoctoreditor.preview.AsciiDoctorEditorBuildSupport$1.run(AsciiDoctorEditorBuildSupport.java:139)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:185)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY de.jcup.asciidoctoreditor 4 0 2020-07-16 11:51:29.136
+!MESSAGE Cannot convert to html:C:\Users\Azul\Documents\L_E\RestAssuredCourse\APIFramework\log.txt
+!STACK 0
+java.lang.IllegalStateException: ASP server initialization timed out and restart was not successful!
+	at de.jcup.asciidoctoreditor.ASPSupport$FallbackRestartNotPossibleSoFailHandler.handleNotAvailable(ASPSupport.java:65)
+	at de.jcup.asciidoctoreditor.ASPSupport.waitForServerAvailable(ASPSupport.java:76)
+	at de.jcup.asciidoctoreditor.ASPSupport.access$1(ASPSupport.java:69)
+	at de.jcup.asciidoctoreditor.ASPSupport$FallbackRestartHandler.handleNotAvailable(ASPSupport.java:55)
+	at de.jcup.asciidoctoreditor.ASPSupport.waitForServerAvailable(ASPSupport.java:76)
+	at de.jcup.asciidoctoreditor.ASPSupport.getAspClient(ASPSupport.java:34)
+	at de.jcup.asciidoctoreditor.asciidoc.AspAsciidoctorAdapter.resolveClient(AspAsciidoctorAdapter.java:68)
+	at de.jcup.asciidoctoreditor.asciidoc.AspAsciidoctorAdapter.convertFile(AspAsciidoctorAdapter.java:50)
+	at de.jcup.asciidoctoreditor.asciidoc.AsciiDoctorWrapper.convert(AsciiDoctorWrapper.java:77)
+	at de.jcup.asciidoctoreditor.preview.AsciiDoctorEditorBuildSupport.fullBuildTemporaryHTMLFilesAndShowAfter(AsciiDoctorEditorBuildSupport.java:220)
+	at de.jcup.asciidoctoreditor.preview.AsciiDoctorEditorBuildSupport.access$1(AsciiDoctorEditorBuildSupport.java:175)
+	at de.jcup.asciidoctoreditor.preview.AsciiDoctorEditorBuildSupport$1.run(AsciiDoctorEditorBuildSupport.java:139)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:185)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY de.jcup.asciidoctoreditor 4 0 2020-07-16 11:51:29.163
+!MESSAGE AsciiDoctor error occured:ASP server initialization timed out and restart was not successful!
+!STACK 0
+java.lang.IllegalStateException: ASP server initialization timed out and restart was not successful!
+	at de.jcup.asciidoctoreditor.ASPSupport$FallbackRestartNotPossibleSoFailHandler.handleNotAvailable(ASPSupport.java:65)
+	at de.jcup.asciidoctoreditor.ASPSupport.waitForServerAvailable(ASPSupport.java:76)
+	at de.jcup.asciidoctoreditor.ASPSupport.access$1(ASPSupport.java:69)
+	at de.jcup.asciidoctoreditor.ASPSupport$FallbackRestartHandler.handleNotAvailable(ASPSupport.java:55)
+	at de.jcup.asciidoctoreditor.ASPSupport.waitForServerAvailable(ASPSupport.java:76)
+	at de.jcup.asciidoctoreditor.ASPSupport.getAspClient(ASPSupport.java:34)
+	at de.jcup.asciidoctoreditor.asciidoc.AspAsciidoctorAdapter.resolveClient(AspAsciidoctorAdapter.java:68)
+	at de.jcup.asciidoctoreditor.asciidoc.AspAsciidoctorAdapter.convertFile(AspAsciidoctorAdapter.java:50)
+	at de.jcup.asciidoctoreditor.asciidoc.AsciiDoctorWrapper.convert(AsciiDoctorWrapper.java:77)
+	at de.jcup.asciidoctoreditor.preview.AsciiDoctorEditorBuildSupport.fullBuildTemporaryHTMLFilesAndShowAfter(AsciiDoctorEditorBuildSupport.java:220)
+	at de.jcup.asciidoctoreditor.preview.AsciiDoctorEditorBuildSupport.access$1(AsciiDoctorEditorBuildSupport.java:175)
+	at de.jcup.asciidoctoreditor.preview.AsciiDoctorEditorBuildSupport$1.run(AsciiDoctorEditorBuildSupport.java:139)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:185)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

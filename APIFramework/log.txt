@@ -1,0 +1,47 @@
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "accuracy": 50,
+    "name": "FrontLine",
+    "phone_number": "4491234567",
+    "address": "Addresss 1234",
+    "website": "http://rahulshettyacademy.com",
+    "language": "French",
+    "location": {
+        "lat": -38.1932983,
+        "lng": 33.45344
+    },
+    "types": [
+        "shoe park",
+        "shop"
+    ]
+}
+HTTP/1.1 200 OK
+Date: Thu, 16 Jul 2020 16:49:36 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "31ab75447a29076557c8d6546aac22d8",
+    "scope": "APP",
+    "reference": "b3fd861da75a55b12d0023023c24a044b3fd861da75a55b12d0023023c24a044",
+    "id": "b3fd861da75a55b12d0023023c24a044"
+}

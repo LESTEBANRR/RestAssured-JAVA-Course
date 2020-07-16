@@ -1,6 +1,9 @@
 package stepDefinitions;
 
 import static org.junit.Assert.*;
+
+import java.io.FileNotFoundException;
+
 import io.cucumber.java.en.*;
 import io.cucumber.junit.Cucumber;
 import io.restassured.builder.RequestSpecBuilder;
@@ -25,14 +28,16 @@ public class StepDefinition extends Utils{
     TestDataBuild data=new TestDataBuild();
 	
 	@Given("^AddPlace Payload$")
-	public void addplace_payload() throws Throwable {				
-		resspec = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
+	public void addplace_payload() throws FileNotFoundException {				
+		
 		res = given().spec(requestSpecification()).body(data.addPlacePayload());
+		
 	}
 
 	@When("^User calls \"([^\"]*)\" API with POST HTTP request$")
 	public void user_calls_something_api_with_post_http_request(String strArg1) throws Throwable {
-		
+
+		resspec = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();		
 		response = res.when().post("/maps/api/place/add/json").then().log().all().spec(resspec).extract()
 				.response();
 		
