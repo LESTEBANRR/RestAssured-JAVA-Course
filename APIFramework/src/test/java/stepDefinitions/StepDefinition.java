@@ -33,7 +33,7 @@ public class StepDefinition extends Utils {
 	}
 
 	@When("^User calls \"([^\"]*)\" API with \\\"([^\\\"]*)\\\" HTTP request$")
-	public void user_calls_something_api_with_post_http_request(String resource, String method) throws Throwable {
+	public void user_calls_some_api_with_some_method_http_request(String resource, String method) throws IOException {
 		
 		APIResources resourcdeAPI=APIResources.valueOf(resource);	
 		resspec = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
@@ -55,10 +55,12 @@ public class StepDefinition extends Utils {
 		assertEquals(getJsonPath(response, key), value);
 	}
 	
-	@And("^Verify place_Id created maps to (.+) using \"([^\"]*)\" API	$")
-    public void verify_placeid_created_maps_to_using_something_api(String name, String strArg1) throws Throwable {
+	@And("^Verify place_Id created maps to \"([^\"]*)\" = (.+) using \"([^\"]*)\" API$")
+    public void verify_placeid_created_maps_to_some_key_using_some_api(String key ,String value, String resource) throws IOException {
 		place_id=getJsonPath(response, "place_id");
 		res = given().spec(requestSpecification())
 				.queryParam("place_id",place_id);
+		user_calls_some_api_with_some_method_http_request(resource,"GET");
+		assertEquals(value, getJsonPath(response, key));
     }
 }
