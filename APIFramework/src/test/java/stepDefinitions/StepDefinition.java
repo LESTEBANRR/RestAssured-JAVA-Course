@@ -72,6 +72,6 @@ public class StepDefinition extends Utils {
 		res = given().spec(requestSpecification()).queryParam("place_id", place_id);
 		user_calls_some_api_with_some_method_http_request(resource, "GET");
 		assertEquals(value, getJsonPath(response, key));
-		System.out.println("Place ID correctly verifired");
+		System.out.println("\t\tPlace ID correctly verifired");
 	}
 }
