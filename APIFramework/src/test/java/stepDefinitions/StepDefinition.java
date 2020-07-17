@@ -55,7 +55,7 @@ public class StepDefinition extends Utils {
 
 	@Then("^The API call is success with status code \\\"([^\\\"]*)\\\"$")
 	public void the_api_call_is_success_with_status_code_200(int code) throws Throwable {
-		assertEquals(response.getStatusCode(), code);
+		assertEquals(code,response.getStatusCode());
 		System.out.println("\t\tRequest Succesfully Done");
 	}
 
