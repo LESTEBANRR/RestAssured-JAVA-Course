@@ -3,3 +3,8 @@ mvn archetype:generate -DgroupId=Qaclickacademy -DartifactId=MavenJava -Darchety
 
 To import Maven project to eclipse
 mvn eclipse:eclipse
+
+Run Tests with Maven (You should be in the directory of the project)
+mvn test
+
+mvn test -Dcucumber.options="--tags @AddPlace"

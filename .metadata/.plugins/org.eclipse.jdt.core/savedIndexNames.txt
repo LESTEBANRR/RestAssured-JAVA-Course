@@ -42,7 +42,6 @@ INDEX VERSION 1.131+C:\Users\Azul\Documents\L_E\RestAssuredCourse\.metadata\.plu
 749515389.index
 582178723.index
 1804248233.index
-2872044937.index
 2943501589.index
 1757013865.index
 3635321148.index
