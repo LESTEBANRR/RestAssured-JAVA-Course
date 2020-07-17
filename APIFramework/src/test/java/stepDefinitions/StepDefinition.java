@@ -32,19 +32,25 @@ public class StepDefinition extends Utils {
 
 	}
 
-	@When("^User calls \"([^\"]*)\" API with POST HTTP request$")
-	public void user_calls_something_api_with_post_http_request(String resource) throws Throwable {
-		APIResources resourcdeAPI=APIResources.valueOf(resource);
+	@When("^User calls \"([^\"]*)\" API with \\\"([^\\\"]*)\\\" HTTP request$")
+	public void user_calls_something_api_with_post_http_request(String resource, String method) throws Throwable {
 		
+		APIResources resourcdeAPI=APIResources.valueOf(resource);	
 		resspec = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
-		response = res.when().post(resourcdeAPI.getResource()).then().spec(resspec).extract().response();
+		
+		if(method.equalsIgnoreCase("POST")) {			
+			response = res.when().post(resourcdeAPI.getResource());
+		}else if (method.equalsIgnoreCase("GET")) {
+			response = res.when().get(resourcdeAPI.getResource());
+		}
+		
 
 	}
 
-	@Then("^The API call is success with status code 200$")
-	public void the_api_call_is_success_with_status_code_200() throws Throwable {
+	@Then("^The API call is success with status code \\\"([^\\\"]*)\\\"$")
+	public void the_api_call_is_success_with_status_code_200(int code) throws Throwable {
 
-		assertEquals(response.getStatusCode(), 200);
+		assertEquals(response.getStatusCode(), code);
 
 	}
 

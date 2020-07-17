@@ -1,7 +1,0 @@
-package files;
-
-public class ReUsableMethods {
-	public static void rawToJson() {
-		
-	}
-}
